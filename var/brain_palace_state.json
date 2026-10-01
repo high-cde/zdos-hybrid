@@ -1,0 +1,12 @@
+{
+  "timestamp": 1790559404.3234818,
+  "agent": "Z-KALI",
+  "ecosystem": "x-zdos-complete + ZDOS Microcosm",
+  "metrics": {
+    "cpu_load": 0.2,
+    "net_latency": 6,
+    "sentience_level": 0.85,
+    "policy": "DEFAULT-DENY / READ-ONLY"
+  },
+  "status": "SYNAPSE_VERIFIED"
+}

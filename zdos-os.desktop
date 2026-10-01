@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ZDOS Omni-OS
+Comment=ZDOS Cybercore Desktop Environment & Token Sentinel
+Exec=python3 /home/ruby/zdos-organism/zdos_omni_os.py
+Icon=utilities-terminal
+Path=/home/ruby/zdos-organism
+Terminal=false
+Categories=System;Development;Utility;
+Keywords=ZDOS;Zlang;Cyberpunk;Sentinel;

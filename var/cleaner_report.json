@@ -1,0 +1,19 @@
+{
+  "timestamp": 1790546027.6204407,
+  "agent": "Z-KALI",
+  "ecosystem": "x-zdos-complete",
+  "metrics": {
+    "cpu_load": 0.25,
+    "net_latency": 8,
+    "sentience_level": 0.85
+  },
+  "status": "SYNAPSE_ACTIVE",
+  "cleaner_report": {
+    "freed_bytes": 20982961,
+    "items_purged": [
+      "Directory rimossa: target/debug/incremental (20489.35 KB)",
+      "Directory rimossa: src/neural/__pycache__ (1.83 KB)"
+    ],
+    "status": "OPTIMIZED"
+  }
+}

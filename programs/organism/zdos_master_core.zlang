@@ -1,0 +1,16 @@
+# ZLANG MASTER CONTRACT // ZDOS ORGANISM
+# Profile: ZLB2 v2.5 (Default-Deny / Read-Only)
+
+profile ZLB2_v2.5 {
+    allow emit;
+    allow storage.read;
+    deny shell;
+    deny network;
+    deny write;
+}
+
+capsule MasterCoreSession {
+    emit "Z-KALI AGI Sovereign Core online.";
+    emit "Brain Palace & Evidence Chain synchronized.";
+    emit "Build what you can prove.";
+}

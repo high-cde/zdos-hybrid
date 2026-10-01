@@ -1,7 +1,7 @@
-pub mod bytecode;
 pub mod opcode;
-pub mod stack;
+pub mod bytecode;
 pub mod vm;
+pub mod stack;
 
 pub fn zvm_init() {
     println!("[ZVM] init");

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>ZDOS Management Hub | app.x-zdos.it</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="zdos-app">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>ZDOS Core</h2>
+                <span class="badge">Net 80.24</span>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="switchTab('dashboard')">Dashboard</button>
+                <button class="nav-btn" onclick="switchTab('gestionale')">Gestionale</button>
+                <button class="nav-btn" onclick="switchTab('microcosm')">ZComm / Microcosm</button>
+                <button class="nav-btn" onclick="switchTab('developers')">Sezione Sviluppatori</button>
+            </nav>
+        </aside>
+        <main class="content">
+            <section id="tab-dashboard" class="tab-pane active">
+                <header>
+                    <h1>Connessione Esterna app.x-zdos.it</h1>
+                    <span id="connection-status" class="status-pill online">Connesso</span>
+                </header>
+                <div class="grid-metrics">
+                    <div class="card">
+                        <h3>Internet 80.24</h3>
+                        <p class="metric-value">ATTIVO (Mesh)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Nodi ZComm</h3>
+                        <p class="metric-value">1,024 Attivi</p>
+                    </div>
+                </div>
+            </section>
+            <section id="tab-gestionale" class="tab-pane">
+                <header><h1>Software Gestionale Distro ZDOS</h1></header>
+                <p>Moduli di gestione risorse e demoni di sistema attivi.</p>
+            </section>
+            <section id="tab-microcosm" class="tab-pane">
+                <header><h1>ZDOS Microcosm - ZComm Node</h1></header>
+                <p>Canale di messaggistica cifrata su Internet 80.24.</p>
+            </section>
+            <section id="tab-developers" class="tab-pane">
+                <header><h1>Sezione Sviluppatori & SDK</h1></header>
+                <p>Endpoint API: <code>https://app.x-zdos.it/api/v1/</code></p>
+            </section>
+        </main>
+    </div>
+    <script src="assets/app.js"></script>
+</body>
+</html>

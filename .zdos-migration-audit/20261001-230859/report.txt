@@ -1,0 +1,146 @@
+ZDOS HYBRID SECURITY MIGRATION AUDIT
+DATE=2026-10-01T23:09:02+02:00
+ROOT=/home/ruby/zdos-organism
+
+=== GIT STATUS ===
+## feat/zdos-hybrid-security-20261001-230859
+ D .zdos_hashmap
+ M core/src/zvm_executor.rs
+ M organism-bin/src/main.rs
+ M zlang/src/compiler.rs
+ M zlang/src/runtime.rs
+ M zvm/src/bytecode.rs
+ M zvm/src/lib.rs
+ M zvm/src/opcode.rs
+ M zvm/src/stack.rs
+ M zvm/src/vm.rs
+?? .zdos-migration-audit/
+?? .zdos-migration-backups/
+?? Zlang/
+?? boot_setup.sh
+?? interface/
+?? programs/organism/z_kali_tick.zlang
+?? programs/organism/zdos_master_core.zlang
+?? src/
+?? time
+?? var/
+?? webapp/
+?? z_kali_cleaner.py
+?? z_kali_megadrive.py
+?? z_kali_ruby_city.py
+?? z_kali_runner.py
+?? z_kali_sovereign.py
+?? z_kali_ui.py
+?? zdos-autobuild.sh
+?? zdos-evolution-deploy.sh
+?? zdos-microcosm-beta/
+?? zdos-os.desktop
+?? zdos_boot.img
+?? zdos_bridge.py
+?? zdos_master_autobuild.zlang
+?? zdos_master_dashboard.py
+?? zdos_omni_os.py
+
+=== PROJECTS ===
+./Cargo.toml
+./core/Cargo.toml
+./cortex/Cargo.toml
+./memzdos/Cargo.toml
+./organism-bin/Cargo.toml
+./zdos-microcosm-beta/package.json
+./zlang/Cargo.toml
+./Zlang/Cargo.toml
+./zvm/Cargo.toml
+
+=== DESKTOP UI ===
+./interface/glass/core_ui.py
+./zdos_omni_os.py
+./z_kali_ui.py
+
+=== MICROCOSM UI ===
+./zdos-microcosm-beta/app
+./zdos-microcosm-beta/app/_layout.tsx
+./zdos-microcosm-beta/app/oauth
+./zdos-microcosm-beta/app/oauth/callback.tsx
+./zdos-microcosm-beta/app/(tabs)
+./zdos-microcosm-beta/app/(tabs)/index.tsx
+./zdos-microcosm-beta/app/(tabs)/_layout.tsx
+./zdos-microcosm-beta/app/dev
+./zdos-microcosm-beta/app/dev/theme-lab.tsx
+./zdos-microcosm-beta/components
+./zdos-microcosm-beta/components/external-link.tsx
+./zdos-microcosm-beta/components/hello-wave.tsx
+./zdos-microcosm-beta/components/haptic-tab.tsx
+./zdos-microcosm-beta/components/ui
+./zdos-microcosm-beta/components/ui/icon-symbol.tsx
+./zdos-microcosm-beta/components/ui/collapsible.tsx
+./zdos-microcosm-beta/components/ui/icon-symbol.ios.tsx
+./zdos-microcosm-beta/components/parallax-scroll-view.tsx
+./zdos-microcosm-beta/components/screen-container.tsx
+./zdos-microcosm-beta/components/themed-view.tsx
+./zdos-microcosm-beta/constants
+./zdos-microcosm-beta/constants/const.ts
+./zdos-microcosm-beta/constants/theme.ts
+./zdos-microcosm-beta/constants/oauth.ts
+./zdos-microcosm-beta/assets
+./zdos-microcosm-beta/assets/images
+./zdos-microcosm-beta/assets/images/favicon.png
+./zdos-microcosm-beta/assets/images/icon.png
+./zdos-microcosm-beta/assets/images/android-icon-foreground.png
+./zdos-microcosm-beta/assets/images/react-logo.png
+./zdos-microcosm-beta/assets/images/react-logo@3x.png
+./zdos-microcosm-beta/assets/images/splash-icon.png
+./zdos-microcosm-beta/assets/images/android-icon-background.png
+./zdos-microcosm-beta/assets/images/react-logo@2x.png
+./zdos-microcosm-beta/assets/images/partial-react-logo.png
+./zdos-microcosm-beta/assets/images/android-icon-monochrome.png
+
+=== BACKEND / NODE / ZCOMM ===
+./zdos-microcosm-beta/server
+./zdos-microcosm-beta/server/_core
+./zdos-microcosm-beta/server/_core/cookies.ts
+./zdos-microcosm-beta/server/_core/systemRouter.ts
+./zdos-microcosm-beta/server/_core/voiceTranscription.ts
+./zdos-microcosm-beta/server/_core/notification.ts
+./zdos-microcosm-beta/server/_core/dataApi.ts
+./zdos-microcosm-beta/server/_core/heartbeat.ts
+./zdos-microcosm-beta/server/_core/types
+./zdos-microcosm-beta/server/_core/types/manusTypes.ts
+./zdos-microcosm-beta/server/_core/types/cookie.d.ts
+./zdos-microcosm-beta/server/_core/context.ts
+./zdos-microcosm-beta/server/_core/trpc.ts
+./zdos-microcosm-beta/server/_core/oauth.ts
+./zdos-microcosm-beta/server/_core/llm.ts
+./zdos-microcosm-beta/server/_core/imageGeneration.ts
+./zdos-microcosm-beta/server/_core/storageProxy.ts
+./zdos-microcosm-beta/server/_core/index.ts
+./zdos-microcosm-beta/server/_core/env.ts
+./zdos-microcosm-beta/server/_core/sdk.ts
+./zdos-microcosm-beta/server/storage.ts
+./zdos-microcosm-beta/server/routers.ts
+./zdos-microcosm-beta/server/db.ts
+./zdos-microcosm-beta/node
+./zdos-microcosm-beta/node/zdos-node.ts
+./zdos-microcosm-beta/lib
+./zdos-microcosm-beta/lib/zdos-zcomm.ts
+./zdos-microcosm-beta/lib/_core
+./zdos-microcosm-beta/lib/_core/nativewind-pressable.ts
+./zdos-microcosm-beta/lib/_core/theme.ts
+./zdos-microcosm-beta/lib/_core/auth.ts
+./zdos-microcosm-beta/lib/_core/manus-runtime.ts
+./zdos-microcosm-beta/lib/_core/api.ts
+./zdos-microcosm-beta/lib/zdos-ops.ts
+./zdos-microcosm-beta/lib/zdos-demo.ts
+./zdos-microcosm-beta/lib/trpc.ts
+./zdos-microcosm-beta/lib/zdos-telecom.ts
+./zdos-microcosm-beta/lib/theme-provider.tsx
+./zdos-microcosm-beta/lib/utils.ts
+./zdos-microcosm-beta/lib/zdos-node.ts
+./zdos-microcosm-beta/lib/zdos-runtime.ts
+
+=== UI TOKENS ===
+
+=== SERVICES / PORTS ===
+
+=== NODE STATUS ===
+ZDOS NODE OFFLINE

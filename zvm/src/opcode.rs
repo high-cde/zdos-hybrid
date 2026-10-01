@@ -1,4 +1,4 @@
-use serde::{Deserialize, Serialize};
+use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum Opcode {
@@ -9,11 +9,5 @@ pub enum Opcode {
     Sub,
     Mul,
     Div,
-    Greater,
-    Less,
-    GreaterEqual,
-    LessEqual,
-    Jump(usize),
-    JumpIfFalse(usize),
     Halt,
 }

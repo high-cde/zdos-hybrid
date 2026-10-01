@@ -1,0 +1,3 @@
+{"timestamp": 1790551132.7914836, "source": "Z-KALI", "target": "ZDOS Microcosm / Evidence Chain", "status": "SYNC_VERIFIED", "policy": "DEFAULT-DENY / READ-ONLY"}
+{"timestamp": 1790552522.1932635, "source": "Z-KALI AGI Core", "action": "AGI_CLEANER", "details": "Pulizia manuale eseguita da control pad.", "status": "VERIFIED_APPEND_ONLY"}
+{"timestamp": 1790559404.3242595, "source": "Z-KALI AGI Core", "action": "ECOSYSTEM_CLEANSE", "details": "Liberati 11387.43 KB di cache non necessaria.", "status": "VERIFIED_APPEND_ONLY"}

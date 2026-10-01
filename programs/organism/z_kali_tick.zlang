@@ -1,0 +1,20 @@
+# Z-KALI Evolution Tick - ZDOS Autonomous Agent
+# Target: ASUS X540NA Celeron / Bio-Feedback Loop
+
+let base_load = 0.42;
+let sensor_cpu = system.cpu_read();
+let stress_factor = sensor_cpu * 1.5;
+
+# Valutazione omeostatica basata su BioFeedback
+if stress_factor > 0.70 {
+    let mutation_rate = 0.15;
+    let loop_delay = 1s;
+    emit "Z-KALI: High load detected. Adapting mutation and tightening loop.";
+} else {
+    let mutation_rate = 0.05;
+    let loop_delay = 2s;
+    emit "Z-KALI: Ecosystem stable. Maintaining baseline homeostasis.";
+}
+
+# Restituisce il fattore di fitness calcolato
+ret fitness_score = 1.0 - (stress_factor * 0.2);
