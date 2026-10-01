@@ -2,22 +2,33 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>ZDOS Management Hub | app.x-zdos.it</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZDOS Hybrid Management Hub · Parrot Edition</title>
+    <meta name="description" content="Management Hub dell'ecosistema ZDOS Hybrid — identità visiva Parrot OS «Echo».">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <div class="topline" aria-hidden="true"></div>
     <div id="zdos-app">
         <aside class="sidebar">
             <div class="logo">
-                <h2>ZDOS Core</h2>
-                <span class="badge">Net 80.24</span>
+                <h2>ZDOS <span>Hybrid</span></h2>
+                <div class="logo-meta">
+                    <span class="badge">Parrot Edition</span>
+                    <span class="badge ghost">Net 80.24</span>
+                </div>
             </div>
             <nav>
                 <button class="nav-btn active" onclick="switchTab('dashboard')">Dashboard</button>
                 <button class="nav-btn" onclick="switchTab('gestionale')">Gestionale</button>
                 <button class="nav-btn" onclick="switchTab('microcosm')">ZComm / Microcosm</button>
                 <button class="nav-btn" onclick="switchTab('developers')">Sezione Sviluppatori</button>
+                <button class="nav-btn" onclick="switchTab('identita')">Identità visiva</button>
             </nav>
+            <footer class="sidebar-footer">
+                <span class="dot" aria-hidden="true"></span>
+                palette Parrot OS <code>#15E0ED</code>
+            </footer>
         </aside>
         <main class="content">
             <section id="tab-dashboard" class="tab-pane active">
@@ -45,8 +56,16 @@
                 <p>Canale di messaggistica cifrata su Internet 80.24.</p>
             </section>
             <section id="tab-developers" class="tab-pane">
-                <header><h1>Sezione Sviluppatori & SDK</h1></header>
+                <header><h1>Sezione Sviluppatori &amp; SDK</h1></header>
                 <p>Endpoint API: <code>https://app.x-zdos.it/api/v1/</code></p>
+            </section>
+            <section id="tab-identita" class="tab-pane">
+                <header><h1>Identità visiva · Parrot OS «Echo»</h1></header>
+                <p>La palette dell'interfaccia è allineata a Parrot OS 7: fondo notte
+                   <code>#0A0118</code>, indaco profondo <code>#06043E</code>, ciano di marca
+                   <code>#15E0ED</code> e neon <code>#00FFF0</code> per gli elementi attivi.</p>
+                <p>Token completi in <code>assets/theme/parrot-tokens.json</code> e nel modulo
+                   <code>parrot_theme.py</code>.</p>
             </section>
         </main>
     </div>

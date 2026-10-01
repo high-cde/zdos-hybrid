@@ -13,51 +13,51 @@ class ZDOSMasterDashboard:
         self.root = tk.Tk()
         self.root.title("ZDOS // SUPER MASTER DASHBOARD [Amsterdam '92 & Z-KALI AGI]")
         self.root.geometry("800x600")
-        self.root.configure(bg="#0c0c14")
+        self.root.configure(bg="#08041B")
         self.root.attributes("-topmost", True)
         
         # Header / Title
-        self.header = tk.Label(self.root, text="ZDOS SOVEREIGN ECOSYSTEM // UNIFIED CONTROL PANEL", bg="#0c0c14", fg="#00ffcc", font=("Courier New", 11, "bold"))
+        self.header = tk.Label(self.root, text="ZDOS SOVEREIGN ECOSYSTEM // UNIFIED CONTROL PANEL", bg="#08041B", fg="#15E0ED", font=("Courier New", 11, "bold"))
         self.header.pack(pady=5)
         
         # Canvas 16-bit (Sega Mega Drive Style - Amsterdam '92)
-        self.canvas = tk.Canvas(self.root, width=780, height=220, bg="#0d111a", highlightthickness=1, highlightbackground="#1e293b")
+        self.canvas = tk.Canvas(self.root, width=780, height=220, bg="#0D0A22", highlightthickness=1, highlightbackground="#252A52")
         self.canvas.pack(padx=10, pady=5)
         
         self.draw_scenery(night_mode=True)
         
         # Frame centrale diviso in due: Controlli rapidi e Terminale di Chat
-        self.main_frame = tk.Frame(self.root, bg="#0c0c14")
+        self.main_frame = tk.Frame(self.root, bg="#08041B")
         self.main_frame.pack(padx=10, pady=5, fill=tk.BOTH, expand=True)
         
         # Pannello sinistro: Pulsanti di controllo rapido (Cleaner, ZLang, GitHub, Sublime)
-        self.btn_frame = tk.Frame(self.main_frame, bg="#121824", bd=1, relief=tk.SOLID)
+        self.btn_frame = tk.Frame(self.main_frame, bg="#131038", bd=1, relief=tk.SOLID)
         self.btn_frame.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 5))
         
-        tk.Label(self.btn_frame, text=" QUICK ACTIONS ", bg="#121824", fg="#38bdf8", font=("Courier New", 9, "bold")).pack(pady=5)
+        tk.Label(self.btn_frame, text=" QUICK ACTIONS ", bg="#131038", fg="#00D3F2", font=("Courier New", 9, "bold")).pack(pady=5)
         
-        tk.Button(self.btn_frame, text="🧹 Esegui Cleaner", bg="#1a2234", fg="#00ffcc", font=("Courier New", 8), width=16, command=self.run_cleaner).pack(padx=5, pady=3)
-        tk.Button(self.btn_frame, text="📜 Valida ZLang", bg="#1a2234", fg="#00ffcc", font=("Courier New", 8), width=16, command=self.run_zlang_check).pack(padx=5, pady=3)
-        tk.Button(self.btn_frame, text="💻 Apri Sublime", bg="#1a2234", fg="#00ffcc", font=("Courier New", 8), width=16, command=self.open_sublime).pack(padx=5, pady=3)
-        tk.Button(self.btn_frame, text="🐙 Info GitHub", bg="#1a2234", fg="#00ffcc", font=("Courier New", 8), width=16, command=self.info_github).pack(padx=5, pady=3)
+        tk.Button(self.btn_frame, text="🧹 Esegui Cleaner", bg="#1B1647", fg="#15E0ED", font=("Courier New", 8), width=16, command=self.run_cleaner).pack(padx=5, pady=3)
+        tk.Button(self.btn_frame, text="📜 Valida ZLang", bg="#1B1647", fg="#15E0ED", font=("Courier New", 8), width=16, command=self.run_zlang_check).pack(padx=5, pady=3)
+        tk.Button(self.btn_frame, text="💻 Apri Sublime", bg="#1B1647", fg="#15E0ED", font=("Courier New", 8), width=16, command=self.open_sublime).pack(padx=5, pady=3)
+        tk.Button(self.btn_frame, text="🐙 Info GitHub", bg="#1B1647", fg="#15E0ED", font=("Courier New", 8), width=16, command=self.info_github).pack(padx=5, pady=3)
         
         # Pannello destro: Terminale Chat Interattivo
-        self.chat_frame = tk.Frame(self.main_frame, bg="#0c0c14")
+        self.chat_frame = tk.Frame(self.main_frame, bg="#08041B")
         self.chat_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
         
-        self.chat_area = scrolledtext.ScrolledText(self.chat_frame, wrap=tk.WORD, bg="#080b10", fg="#00ffcc", font=("Courier New", 9), insertbackground="white")
+        self.chat_area = scrolledtext.ScrolledText(self.chat_frame, wrap=tk.WORD, bg="#06031A", fg="#15E0ED", font=("Courier New", 9), insertbackground="white")
         self.chat_area.pack(fill=tk.BOTH, expand=True)
         self.chat_area.config(state=tk.DISABLED)
         
         # Input riga comandi
-        input_frame = tk.Frame(self.root, bg="#0c0c14")
+        input_frame = tk.Frame(self.root, bg="#08041B")
         input_frame.pack(padx=10, pady=8, fill=tk.X)
         
-        self.msg_entry = tk.Entry(input_frame, bg="#161f30", fg="#00ffcc", font=("Courier New", 10), insertbackground="white")
+        self.msg_entry = tk.Entry(input_frame, bg="#16123F", fg="#15E0ED", font=("Courier New", 10), insertbackground="white")
         self.msg_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
         self.msg_entry.bind("<Return>", self.send_message)
         
-        send_btn = tk.Button(input_frame, text="▶ INVIA", bg="#161f30", fg="#00ffcc", font=("Courier New", 9, "bold"), command=self.send_message)
+        send_btn = tk.Button(input_frame, text="▶ INVIA", bg="#16123F", fg="#15E0ED", font=("Courier New", 9, "bold"), command=self.send_message)
         send_btn.pack(side=tk.RIGHT)
         
         self.append_chat("Z-KALI", "Master Dashboard attivata. Tutti i moduli (Cortex, Cleaner, ZLang, Evidence Chain) sono sincronizzati.")
@@ -69,30 +69,30 @@ class ZDOSMasterDashboard:
 
     def draw_scenery(self, night_mode=True):
         self.canvas.delete("all")
-        bg_color = "#090d16" if night_mode else "#3b82f6"
-        moon_color = "#e2e8f0" if night_mode else "#fbbf24"
+        bg_color = "#05020F" if night_mode else "#00B8DB"
+        moon_color = "#EAF6FF" if night_mode else "#FFC857"
         
         self.canvas.create_rectangle(0, 0, 780, 220, fill=bg_color, outline="")
         self.canvas.create_oval(660, 20, 710, 70, fill=moon_color, outline="")
         
         # Skyline
-        self.canvas.create_rectangle(50, 110, 130, 220, fill="#111827", outline="")
-        self.canvas.create_rectangle(140, 80, 240, 220, fill="#0f172a", outline="")
-        self.canvas.create_rectangle(250, 120, 340, 220, fill="#1e293b", outline="")
-        self.canvas.create_rectangle(350, 90, 460, 220, fill="#0f172a", outline="")
+        self.canvas.create_rectangle(50, 110, 130, 220, fill="#0D0A22", outline="")
+        self.canvas.create_rectangle(140, 80, 240, 220, fill="#0A0118", outline="")
+        self.canvas.create_rectangle(250, 120, 340, 220, fill="#252A52", outline="")
+        self.canvas.create_rectangle(350, 90, 460, 220, fill="#0A0118", outline="")
         
-        self.canvas.create_rectangle(0, 0, 780, 220, outline="#1e293b", width=4)
+        self.canvas.create_rectangle(0, 0, 780, 220, outline="#252A52", width=4)
         
-        self.canvas.create_text(600, 170, text="NEO-CAT", fill="#94a3b8", font=("Courier New", 12, "bold"))
-        self.canvas.create_text(600, 190, text="AMSTERDAM '92", fill="#94a3b8", font=("Courier New", 10, "bold"))
-        self.canvas.create_text(600, 210, text="▶ ZDOS ACTIVE", fill="#00ffcc", font=("Courier New", 9, "bold"))
+        self.canvas.create_text(600, 170, text="NEO-CAT", fill="#A9BCD6", font=("Courier New", 12, "bold"))
+        self.canvas.create_text(600, 190, text="AMSTERDAM '92", fill="#A9BCD6", font=("Courier New", 10, "bold"))
+        self.canvas.create_text(600, 210, text="▶ ZDOS ACTIVE", fill="#15E0ED", font=("Courier New", 9, "bold"))
 
         # Tavolo / Gatto Cibernetico
-        self.canvas.create_rectangle(20, 150, 200, 220, fill="#1a2234", outline="#334155", width=2)
-        self.canvas.create_oval(70, 160, 120, 210, fill="#273447", outline="#475569")
-        self.canvas.create_rectangle(85, 135, 125, 175, fill="#273447", outline="#475569")
-        self.canvas.create_rectangle(92, 148, 100, 156, fill="#00ffcc", outline="")
-        self.canvas.create_rectangle(110, 148, 118, 156, fill="#00ffcc", outline="")
+        self.canvas.create_rectangle(20, 150, 200, 220, fill="#1B1647", outline="#2F3668", width=2)
+        self.canvas.create_oval(70, 160, 120, 210, fill="#2A3060", outline="#3A4275")
+        self.canvas.create_rectangle(85, 135, 125, 175, fill="#2A3060", outline="#3A4275")
+        self.canvas.create_rectangle(92, 148, 100, 156, fill="#15E0ED", outline="")
+        self.canvas.create_rectangle(110, 148, 118, 156, fill="#15E0ED", outline="")
 
     def animate_scene(self):
         self.frame_count += 1
@@ -106,7 +106,7 @@ class ZDOSMasterDashboard:
             if drop[1] > 220 or drop[0] < 0:
                 drop[0] = random.randint(300, 780)
                 drop[1] = random.randint(0, 40)
-            self.canvas.create_line(drop[0], drop[1], drop[0] - 2, drop[1] + 5, fill="#38bdf8", width=1)
+            self.canvas.create_line(drop[0], drop[1], drop[0] - 2, drop[1] + 5, fill="#00D3F2", width=1)
             
         self.root.after(50, self.animate_scene)
 

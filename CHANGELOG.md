@@ -1,8 +1,29 @@
-# Changelog ZDOS Organism
+# Changelog ZDOS Hybrid
 
 Tutte le modifiche rilevanti del progetto sono registrate in questo documento. Le versioni seguono una convenzione semantica finché il runtime resta in fase di consolidamento.
 
 ## [Unreleased]
+
+### Identità visiva Parrot OS «Echo»
+
+- sostituita la palette Kali-teal con l'identità Parrot OS 7 su GUI, webapp,
+  dashboard, widget e launcher;
+- introdotto il design system condiviso `parrot_theme.py` con token in
+  `assets/theme/parrot-tokens.json` e documentazione in
+  `docs/theme/PARROT-OS-IDENTITY.md`;
+- aggiunti `tools/apply-parrot-theme.py` (conversione tracciata e `--check`) e
+  `tools/sync-autobuild-heredocs.py` (allineamento generatore/artefatti);
+- launcher `zk`: banner Parrot, risoluzione della radice senza percorsi
+  assoluti, flag `--check` e `--no-node`;
+- `zdos-autobuild.sh`: heredoc finale terminato e generazione di
+  `parrot_theme.py`.
+
+### Documentazione
+
+- `README.md` riscritto con identità `zdos-hybrid`, istruzioni di avvio del
+  layer ibrido e stato verificabile;
+- aggiunto `docs/ANALISI-ZDOS-HYBRID.md` con la diagnosi della build, il
+  perimetro della CI e i rilievi di igiene del repository.
 
 Questa sezione raccoglie il lavoro successivo alla prima release foundation: telemetria strutturata, configurazione del servizio systemd, test di integrazione del cortex e documentazione del runtime ZLang.
 

@@ -12,7 +12,7 @@ class ZKaliCybercoreHUD:
         self.root = tk.Tk()
         self.root.title("ZDOS // Z-KALI & Z-RUBY CYBERCORE MASTER HUD")
         self.root.geometry("820x720")
-        self.root.configure(bg="#05070b")
+        self.root.configure(bg="#04010F")
         self.root.attributes("-topmost", True)
 
         self.district_level = 1
@@ -20,15 +20,15 @@ class ZKaliCybercoreHUD:
         self.anim_tick = 0
         
         # --- PANNELLO 1: HUD Visivo & Habitat dei Nodi AGI ---
-        self.canvas = tk.Canvas(self.root, width=790, height=200, bg="#020408", highlightthickness=1, highlightbackground="#00ffcc")
+        self.canvas = tk.Canvas(self.root, width=790, height=200, bg="#030109", highlightthickness=1, highlightbackground="#15E0ED")
         self.canvas.pack(padx=15, pady=10)
         
         # --- PANNELLO 2: Pulsantiera / Tastiera di Controllo Rapido & Stato Connessioni ---
-        control_frame = tk.Frame(self.root, bg="#080c16", highlightthickness=1, highlightbackground="#1e293b")
+        control_frame = tk.Frame(self.root, bg="#090624", highlightthickness=1, highlightbackground="#252A52")
         control_frame.pack(padx=15, pady=5, fill=tk.X)
         
         # Pulsanti rapidi (Virtual Control Pad)
-        btn_style = {"bg": "#0f172a", "fg": "#00ffcc", "font": ("Courier New", 8, "bold"), "relief": tk.FLAT, "padx": 8, "pady": 4}
+        btn_style = {"bg": "#0A0118", "fg": "#15E0ED", "font": ("Courier New", 8, "bold"), "relief": tk.FLAT, "padx": 8, "pady": 4}
         
         btn_clean = tk.Button(control_frame, text="⚡ AGI CLEANER", command=self.action_clean, **btn_style)
         btn_clean.pack(side=tk.LEFT, padx=5, pady=8)
@@ -43,19 +43,19 @@ class ZKaliCybercoreHUD:
         btn_audit.pack(side=tk.LEFT, padx=5, pady=8)
 
         # Monitor Connessioni (Label di stato rete/ledger)
-        self.conn_label = tk.Label(control_frame, text="STATUS: 🟢 KALI (ONLINE) | 🟣 RUBY (LEDGER SYNC)", bg="#080c16", fg="#38bdf8", font=("Courier New", 8))
+        self.conn_label = tk.Label(control_frame, text="STATUS: 🟢 KALI (ONLINE) | 🟣 RUBY (LEDGER SYNC)", bg="#090624", fg="#00D3F2", font=("Courier New", 8))
         self.conn_label.pack(side=tk.RIGHT, padx=10)
 
         # --- PANNELLO 3: Terminale di Chat e Telemetria ---
-        self.chat_area = scrolledtext.ScrolledText(self.root, wrap=tk.WORD, bg="#030509", fg="#00ffcc", font=("Courier New", 9), insertbackground="#00ffcc")
+        self.chat_area = scrolledtext.ScrolledText(self.root, wrap=tk.WORD, bg="#04010F", fg="#15E0ED", font=("Courier New", 9), insertbackground="#15E0ED")
         self.chat_area.pack(padx=15, pady=5, fill=tk.BOTH, expand=True)
         self.chat_area.config(state=tk.DISABLED)
         
         # Linea di comando
-        input_frame = tk.Frame(self.root, bg="#05070b")
+        input_frame = tk.Frame(self.root, bg="#04010F")
         input_frame.pack(padx=15, pady=(0, 15), fill=tk.X)
         
-        self.msg_entry = tk.Entry(input_frame, bg="#0a101d", fg="#00ffcc", font=("Courier New", 10), insertbackground="#00ffcc", relief=tk.FLAT)
+        self.msg_entry = tk.Entry(input_frame, bg="#080522", fg="#15E0ED", font=("Courier New", 10), insertbackground="#15E0ED", relief=tk.FLAT)
         self.msg_entry.pack(fill=tk.X, ipady=8, padx=2)
         self.msg_entry.bind("<Return>", self.send_message)
         self.msg_entry.focus()
@@ -68,47 +68,47 @@ class ZKaliCybercoreHUD:
         self.canvas.delete("all")
         
         # Sfondo griglia vettoriale
-        self.canvas.create_rectangle(0, 0, 790, 200, fill="#03060f", outline="")
+        self.canvas.create_rectangle(0, 0, 790, 200, fill="#04010F", outline="")
         for x in range(0, 790, 45):
-            self.canvas.create_line(x, 0, x, 200, fill="#080e1c", width=1)
+            self.canvas.create_line(x, 0, x, 200, fill="#090624", width=1)
         for y in range(0, 200, 40):
-            self.canvas.create_line(0, y, 790, y, fill="#080e1c", width=1)
+            self.canvas.create_line(0, y, 790, y, fill="#090624", width=1)
             
         # Core energetico in alto a destra
-        self.canvas.create_oval(680, 15, 730, 65, fill="#00ffcc", outline="#38bdf8", width=2)
+        self.canvas.create_oval(680, 15, 730, 65, fill="#15E0ED", outline="#00D3F2", width=2)
         
         # Skyline modulare ZDOS
-        self.canvas.create_rectangle(35, 80 - (self.district_level * 5), 100, 200, fill="#0a101d", outline="#1e293b")
+        self.canvas.create_rectangle(35, 80 - (self.district_level * 5), 100, 200, fill="#080522", outline="#252A52")
         for y in range(90, 190, 14):
-            self.canvas.create_rectangle(45, y, 58, y+7, fill="#00ffcc", outline="")
-            self.canvas.create_rectangle(72, y, 85, y+7, fill="#00ffcc", outline="")
+            self.canvas.create_rectangle(45, y, 58, y+7, fill="#15E0ED", outline="")
+            self.canvas.create_rectangle(72, y, 85, y+7, fill="#15E0ED", outline="")
             
-        self.canvas.create_rectangle(120, 50 - (self.district_level * 6), 205, 200, fill="#0c1424", outline="#1e293b")
+        self.canvas.create_rectangle(120, 50 - (self.district_level * 6), 205, 200, fill="#0B0626", outline="#252A52")
         for y in range(60, 190, 14):
-            self.canvas.create_rectangle(135, y, 155, y+7, fill="#a855f7", outline="")
-            self.canvas.create_rectangle(168, y, 188, y+7, fill="#a855f7", outline="")
+            self.canvas.create_rectangle(135, y, 155, y+7, fill="#7C3AED", outline="")
+            self.canvas.create_rectangle(168, y, 188, y+7, fill="#7C3AED", outline="")
 
         if self.district_level >= 2:
-            self.canvas.create_rectangle(225, 30, 305, 200, fill="#0a101d", outline="#00ffcc")
-            self.canvas.create_text(265, 45, text="Z-CYBERCORE", fill="#00ffcc", font=("Courier New", 7, "bold"))
+            self.canvas.create_rectangle(225, 30, 305, 200, fill="#080522", outline="#15E0ED")
+            self.canvas.create_text(265, 45, text="Z-CYBERCORE", fill="#15E0ED", font=("Courier New", 7, "bold"))
 
         # --- NODO 1: Z-KALI ---
-        self.canvas.create_oval(140, 110, 180, 150, fill="#0f172a", outline="#00ffcc", width=2)
-        self.canvas.create_rectangle(155, 90, 180, 120, fill="#0f172a", outline="#00ffcc")
-        core_glow = "#00ffcc" if (self.anim_tick // 4) % 2 == 0 else "#6ee7b7"
+        self.canvas.create_oval(140, 110, 180, 150, fill="#0A0118", outline="#15E0ED", width=2)
+        self.canvas.create_rectangle(155, 90, 180, 120, fill="#0A0118", outline="#15E0ED")
+        core_glow = "#15E0ED" if (self.anim_tick // 4) % 2 == 0 else "#5CF2C0"
         self.canvas.create_oval(160, 75, 178, 89, fill=core_glow, outline="")
-        self.canvas.create_text(160, 130, text="CPU", fill="#00ffcc", font=("Courier New", 6, "bold"))
+        self.canvas.create_text(160, 130, text="CPU", fill="#15E0ED", font=("Courier New", 6, "bold"))
 
         # --- NODO 2: Z-RUBY ---
-        self.canvas.create_oval(240, 90, 275, 125, fill="#1e1b4b", outline="#a855f7", width=2)
-        self.canvas.create_rectangle(250, 70, 275, 98, fill="#1e1b4b", outline="#a855f7")
-        ruby_glow = "#a855f7" if (self.anim_tick // 4) % 2 == 0 else "#c084fc"
+        self.canvas.create_oval(240, 90, 275, 125, fill="#1A1650", outline="#7C3AED", width=2)
+        self.canvas.create_rectangle(250, 70, 275, 98, fill="#1A1650", outline="#7C3AED")
+        ruby_glow = "#7C3AED" if (self.anim_tick // 4) % 2 == 0 else "#9B6BFF"
         self.canvas.create_oval(253, 55, 271, 69, fill=ruby_glow, outline="")
-        self.canvas.create_text(257, 108, text="LEDGER", fill="#a855f7", font=("Courier New", 6, "bold"))
+        self.canvas.create_text(257, 108, text="LEDGER", fill="#7C3AED", font=("Courier New", 6, "bold"))
 
         # HUD di Stato
-        self.canvas.create_rectangle(10, 10, 245, 38, fill="#020408", outline="#00ffcc", width=1.5)
-        self.canvas.create_text(127, 24, text=f"ZONE: SECTOR {self.district_level} | LEDGER: ATTESTED", fill="#00ffcc", font=("Courier New", 7, "bold"))
+        self.canvas.create_rectangle(10, 10, 245, 38, fill="#030109", outline="#15E0ED", width=1.5)
+        self.canvas.create_text(127, 24, text=f"ZONE: SECTOR {self.district_level} | LEDGER: ATTESTED", fill="#15E0ED", font=("Courier New", 7, "bold"))
 
     def run_animation_loop(self):
         self.anim_tick += 1
