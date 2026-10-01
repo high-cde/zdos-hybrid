@@ -1,0 +1,92 @@
+{
+  "name": "Parrot OS 7 Echo — ZDOS Hybrid identity",
+  "palette": {
+    "bg_deep": "#04010F",
+    "bg": "#0A0118",
+    "panel": "#0F0A1E",
+    "panel_alt": "#131038",
+    "surface": "#06043E",
+    "surface_alt": "#16123F",
+    "raised": "#1B1647",
+    "canvas_sky": "#06043E",
+    "night_alt": "#0A0A1F",
+    "border": "#1D2B4B",
+    "border_hi": "#252A52",
+    "border_soft": "#2A3060",
+    "text": "#EAF6FF",
+    "text_soft": "#D6E6F5",
+    "text_muted": "#8799B5",
+    "text_dim": "#6F7F9E",
+    "cyan": "#15E0ED",
+    "cyan_hi": "#00FFF0",
+    "cyan_mid": "#00D3F2",
+    "cyan_dim": "#00B8DB",
+    "teal": "#02ABB5",
+    "teal_deep": "#0B3B4A",
+    "violet": "#7C3AED",
+    "violet_soft": "#9B6BFF",
+    "ok": "#3DDC97",
+    "warn": "#FFC857",
+    "alert": "#FF5C7A",
+    "gold": "#FEBE2D",
+    "on_cyan": "#000000"
+  },
+  "fonts": {
+    "ui": [
+      "Ubuntu",
+      10
+    ],
+    "ui_bold": [
+      "Ubuntu",
+      10,
+      "bold"
+    ],
+    "ui_small": [
+      "Ubuntu",
+      9
+    ],
+    "brand": [
+      "Ubuntu",
+      11,
+      "bold"
+    ],
+    "mono": [
+      "JetBrains Mono",
+      9
+    ],
+    "mono_small": [
+      "Consolas",
+      9
+    ],
+    "mono_bold": [
+      "Consolas",
+      9,
+      "bold"
+    ]
+  },
+  "css": {
+    "--parrot-bg-deep": "#04010F",
+    "--parrot-bg": "#0A0118",
+    "--parrot-panel": "#0F0A1E",
+    "--parrot-panel-alt": "#131038",
+    "--parrot-surface": "#06043E",
+    "--parrot-raised": "#1B1647",
+    "--parrot-border": "#1D2B4B",
+    "--parrot-border-hi": "#252A52",
+    "--parrot-text": "#EAF6FF",
+    "--parrot-text-muted": "#8799B5",
+    "--parrot-cyan": "#15E0ED",
+    "--parrot-cyan-hi": "#00FFF0",
+    "--parrot-cyan-dim": "#00B8DB",
+    "--parrot-teal": "#02ABB5",
+    "--parrot-violet": "#7C3AED",
+    "--parrot-ok": "#3DDC97",
+    "--parrot-warn": "#FFC857",
+    "--parrot-alert": "#FF5C7A"
+  },
+  "sources": {
+    "brand_color": "simple-icons — Parrot Security (#15E0ED)",
+    "site_palette": "parrotsec.org pubblico CSS (#00FFF0, #00D3F2, #00B8DB, #02ABB5, #0A0118, #06043E, #0F0A1E, #0A0A1F, #8799B5, #FEBE2D)",
+    "release": "Parrot OS 7 «Echo» — temi Flat Remix + Sweet Mars"
+  }
+}

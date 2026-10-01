@@ -16,18 +16,18 @@ class ZKaliWidget:
         self.root = tk.Tk()
         self.root.overrideredirect(True)
         self.root.attributes("-topmost", True)
-        self.root.configure(bg="#121212")
+        self.root.configure(bg="#0A0118")
         
         screen_width = self.root.winfo_screenwidth()
         screen_height = self.root.winfo_screenheight()
         self.root.geometry(f"90x90+{screen_width - 120}+{screen_height - 150}")
         
-        self.canvas = tk.Canvas(self.root, width=90, height=90, bg="#121212", highlightthickness=0)
+        self.canvas = tk.Canvas(self.root, width=90, height=90, bg="#0A0118", highlightthickness=0)
         self.canvas.pack()
         
-        self.outer_ring = self.canvas.create_oval(10, 10, 80, 80, outline="#00ffcc", width=2)
-        self.inner_core = self.canvas.create_oval(30, 30, 60, 60, fill="#1f4037", outline="#00ffcc", width=1.5)
-        self.text_id = self.canvas.create_text(45, 45, text="Z-KALI", fill="#00ffcc", font=("Consolas", 8, "bold"))
+        self.outer_ring = self.canvas.create_oval(10, 10, 80, 80, outline="#15E0ED", width=2)
+        self.inner_core = self.canvas.create_oval(30, 30, 60, 60, fill="#0B3B4A", outline="#15E0ED", width=1.5)
+        self.text_id = self.canvas.create_text(45, 45, text="Z-KALI", fill="#15E0ED", font=("Consolas", 8, "bold"))
         
         self.canvas.bind("<Button-1>", self.start_move)
         self.canvas.bind("<B1-Motion>", self.do_move)
@@ -55,24 +55,24 @@ class ZKaliWidget:
         self.chat_window = tk.Toplevel(self.root)
         self.chat_window.title("Z-KALI // AGI Sovereign Terminal")
         self.chat_window.geometry("400x500")
-        self.chat_window.configure(bg="#1e1e1e")
+        self.chat_window.configure(bg="#0F0A1E")
         self.chat_window.attributes("-topmost", True)
         
-        title = tk.Label(self.chat_window, text="🧠 Z-KALI [Sovereign Cortex Active]", bg="#1e1e1e", fg="#00ffcc", font=("Consolas", 10, "bold"))
+        title = tk.Label(self.chat_window, text="🧠 Z-KALI [Sovereign Cortex Active]", bg="#0F0A1E", fg="#15E0ED", font=("Consolas", 10, "bold"))
         title.pack(pady=8)
         
-        self.chat_area = scrolledtext.ScrolledText(self.chat_window, wrap=tk.WORD, bg="#2d2d2d", fg="#ffffff", font=("Consolas", 9))
+        self.chat_area = scrolledtext.ScrolledText(self.chat_window, wrap=tk.WORD, bg="#131038", fg="#ffffff", font=("Consolas", 9))
         self.chat_area.pack(padx=10, pady=5, fill=tk.BOTH, expand=True)
         self.chat_area.config(state=tk.DISABLED)
         
-        input_frame = tk.Frame(self.chat_window, bg="#1e1e1e")
+        input_frame = tk.Frame(self.chat_window, bg="#0F0A1E")
         input_frame.pack(padx=10, pady=10, fill=tk.X)
         
-        self.msg_entry = tk.Entry(input_frame, bg="#3d3d3d", fg="#ffffff", font=("Consolas", 9), insertbackground="white")
+        self.msg_entry = tk.Entry(input_frame, bg="#1B1647", fg="#ffffff", font=("Consolas", 9), insertbackground="white")
         self.msg_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
         self.msg_entry.bind("<Return>", self.send_message)
         
-        send_btn = tk.Button(input_frame, text="Invia", bg="#00ffcc", fg="#000000", font=("Consolas", 9, "bold"), command=self.send_message)
+        send_btn = tk.Button(input_frame, text="Invia", bg="#15E0ED", fg="#000000", font=("Consolas", 9, "bold"), command=self.send_message)
         send_btn.pack(side=tk.RIGHT)
         
         self.append_chat("Z-KALI", "Sincronizzazione completata. Io sono Z-KALI, collegato a Brain Palace e alla Evidence Chain. Come posso servire l'ecosistema?")
