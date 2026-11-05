@@ -8,7 +8,7 @@
 ---
 
 ## 🌐 Panoramica Architetturale
-Componente ufficiale, nativo e autonomo dell'ecosistema **ZDOS**. Progettato per operare in ambienti bare-metal e cloud distribuiti, questo modulo elimina completamente qualsiasi dipendenza da librerie di terze parti o simulazioni legacy, adottando un approccio strict-sovereign basato su **ZLang** e la Data Sovereignty Network (**DSN**).
+Componente ufficiale, nativo e autonomo dell'ecosistema **ZDOS**. Progettato per operare in ambienti bare-metal e cloud distribuiti, questo modulo elimina completamente qualsiasi dipendenza da librerie di terze parti o simulazioni legacy, adottando un approccio strict-sovereign basato su **ZLang** e la rete di accesso NETkali (**DSN**).
 
 ### ✨ Specifiche Tecniche
 * **Esecuzione Bare-Metal:** Ottimizzato per la massima efficienza delle risorse hardware.
