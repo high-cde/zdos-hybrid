@@ -27,3 +27,5 @@ fitness.txt
 /site/.build/
 .zdos-migration-backups/
 zdos_boot.img
+# zdos-dsn-code-align v1: virtualenv e cache
+zdos-llm/

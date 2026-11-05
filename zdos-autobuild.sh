@@ -116,7 +116,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 from PIL import Image, ImageTk
 
-TOKEN_ADDRESS = "0xfc90516a1f736fac557e09d8853db80da192c296"
+TOKEN_ADDRESS = "0xfc90516a1f736FaC557e09D8853dB80dA192c296"
 BRIDGE_PORT = 8888
 
 class BridgeState:
